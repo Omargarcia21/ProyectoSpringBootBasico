@@ -39,12 +39,15 @@ public class UsuarioController {
     }
 
     @PostMapping("/usuarios")
-    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario) throws URISyntaxException {
+    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario) {
         // Lógica para crear un nuevo usuario
         // Retorna ResponseEntity con el objeto User en el cuerpo y un código de estado 201 (CREATED) en la respuesta.
-        usuarioService.crearUsuario(usuario);
-
-        return ResponseEntity.created(new URI("http://localhost/usuarios")).build();
+        try {
+            usuarioService.crearUsuario(usuario);
+            return ResponseEntity.created(new URI("http://localhost/usuarios")).build();
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @PutMapping("/usuarios/{id}")
