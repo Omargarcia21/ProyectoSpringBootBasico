@@ -1,10 +1,19 @@
 package com.ebac.modulo39.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
 @Entity
 public class Usuario {
     @Id
@@ -12,28 +21,7 @@ public class Usuario {
     private int idUsuario;
     private String nombre;
     private int edad;
-
-    public int getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    @JsonManagedReference  // Parte administrada de la relación
+    private List<Telefono> telefonos = new ArrayList<>();
 }

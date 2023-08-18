@@ -5,6 +5,13 @@ Tabla
     	nombre VARCHAR(100),
     	edad INT
 	);
+	CREATE TABLE telefono (
+    	id_telefono INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    	id_usuario INT NOT NULL,
+    	tipo_telefono VARCHAR(20),
+    	lada INT,
+    	numero VARCHAR(15)
+	);
 
 Docker
 **********
