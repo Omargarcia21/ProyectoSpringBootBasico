@@ -28,3 +28,11 @@ com.mysql.jdbc.Driver
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.33</version>
 </dependency>
+
+------- Swagger
+1.- Mostrar el archivo yaml generado manualmente
+
+2.- Mostrar como se genera de manera automatica
+    - Librerias
+    - Ejecucion en navegador
+    - Personalizacion de paths

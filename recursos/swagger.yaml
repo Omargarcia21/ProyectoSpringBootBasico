@@ -1,0 +1,137 @@
+openapi: 3.0.0
+servers:
+  - description: Usuarios API
+    url: http://localhost:8080/usuarios/1.0.0
+info:
+  version: "1.0.0"
+  title: Agenda de usuarios
+  description: API para registrar usuarios
+paths:
+  /usuarios:
+    get:
+      tags:
+        - Usuario
+      description: Retorna todos los usuarios registrados en la base de datos
+      operationId: getUsuarios
+      parameters:
+        - in: query
+          name: limit
+          description: Límite de usuarios a mostrar
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Todos los usuarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ResponseWrapperUsuario'
+    post:
+      tags:
+        - Usuario
+      operationId: Registrar
+      responses:
+        '201':
+          description: Usuario registrado exitosamente
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+  '/usuarios/{idUsuario}':
+    get:
+      tags:
+        - Usuario
+      operationId: Obtener usuario por id
+      parameters:
+        - name: idUsuario
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+    put:
+      tags:
+        - Usuario
+      operationId: Actualizar usuario por id
+      parameters:
+        - name: idUsuario
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+    delete:
+      tags:
+        - Usuario
+      operationId: Eliminar usuario por id
+      parameters:
+        - name: idUsuario
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '204':
+          description: response
+
+components:
+  schemas:
+    ResponseWrapperUsuario:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        responseEntity:
+          $ref: '#/components/schemas/ResponseEntityUsuario'
+    ResponseEntityUsuario:
+      type: object
+      properties:
+        headers:
+          type: object
+          format: String
+        usuario:
+          $ref: '#/components/schemas/Usuario'
+        statusCode:
+          type: string
+        statusCodeValue:
+          type: integer
+          format: int32
+    Usuario:
+      type: object
+      properties:
+        idUsuario:
+          type: integer
+          format: int32
+        nombre:
+          type: string
+        edad:
+          type: integer
+          format: int32
+        correo:
+          type: string
