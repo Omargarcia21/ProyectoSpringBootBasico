@@ -28,3 +28,30 @@ com.mysql.jdbc.Driver
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.33</version>
 </dependency>
+
+*********************************************
+Conexión hacia instancia EC2
+chmod 400 LLAVE
+ssh -i /Users/spcruzaley/Documents/tmp/LLAVE USUARIO@IP
+
+Actualizar repositorios e instalar JDK 17
+apt-get update
+apt-get upgrade -y
+apt-cache search jdk-17
+apt-get install openjdk-17-jre
+
+Generar artefacto
+mvn clean package
+
+Copiar archivo local hacia instancia EC2
+scp -i /Users/spcruzaley/Documents/tmp/LLAVE ARCHIVO.JAR USUARIO@IP:/ruta/
+
+Dentro de la instancia EC2
+chmod +x startApp.sh
+chmod +x app.jar
+./startApp.sh
+
+-Dspring.profiles.active=dev
+
+Ver los logs
+tail -f logs/ebacSpringBootApp.log
