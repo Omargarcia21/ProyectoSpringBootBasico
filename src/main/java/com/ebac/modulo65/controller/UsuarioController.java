@@ -1,7 +1,7 @@
-package com.ebac.modulo39.controller;
+package com.ebac.modulo65.controller;
 
-import com.ebac.modulo39.dto.Usuario;
-import com.ebac.modulo39.service.UsuarioService;
+import com.ebac.modulo65.dto.Usuario;
+import com.ebac.modulo65.service.UsuarioService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
 

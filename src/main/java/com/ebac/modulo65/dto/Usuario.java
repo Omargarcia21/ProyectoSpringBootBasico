@@ -1,6 +1,5 @@
-package com.ebac.modulo39.dto;
+package com.ebac.modulo65.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.ebac.modulo39.dto;
+package com.ebac.modulo65.dto;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Entity;

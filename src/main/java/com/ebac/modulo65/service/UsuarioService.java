@@ -1,8 +1,7 @@
-package com.ebac.modulo39.service;
+package com.ebac.modulo65.service;
 
-import com.ebac.modulo39.dto.Usuario;
-import com.ebac.modulo39.repository.UsuarioRepository;
-import lombok.extern.slf4j.Slf4j;
+import com.ebac.modulo65.dto.Usuario;
+import com.ebac.modulo65.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

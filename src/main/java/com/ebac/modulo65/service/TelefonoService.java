@@ -1,7 +1,7 @@
-package com.ebac.modulo39.service;
+package com.ebac.modulo65.service;
 
-import com.ebac.modulo39.dto.Telefono;
-import com.ebac.modulo39.repository.TelefonoRepository;
+import com.ebac.modulo65.dto.Telefono;
+import com.ebac.modulo65.repository.TelefonoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

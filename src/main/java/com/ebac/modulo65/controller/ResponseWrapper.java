@@ -1,4 +1,4 @@
-package com.ebac.modulo39.controller;
+package com.ebac.modulo65.controller;
 
 import org.springframework.http.ResponseEntity;
 

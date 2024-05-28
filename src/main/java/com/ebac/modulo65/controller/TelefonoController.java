@@ -1,7 +1,7 @@
-package com.ebac.modulo39.controller;
+package com.ebac.modulo65.controller;
 
-import com.ebac.modulo39.dto.Telefono;
-import com.ebac.modulo39.service.TelefonoService;
+import com.ebac.modulo65.dto.Telefono;
+import com.ebac.modulo65.service.TelefonoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

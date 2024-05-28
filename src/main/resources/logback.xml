@@ -30,7 +30,7 @@
         </layout>
     </appender>
 
-    <logger name="com.ebac.modulo39" level="info" additivity="false">
+    <logger name="com.ebac.modulo65" level="info" additivity="false">
         <appender-ref ref="FILE-ROLLING"/>
         <appender-ref ref="CONSOLE"/>
     </logger>

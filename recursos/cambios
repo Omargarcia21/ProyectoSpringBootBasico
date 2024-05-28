@@ -6,4 +6,4 @@
 6.- Agregar logback
 7.- Empaquetar respuestas
 8.- Perfiles
-java -jar -Dspring.profiles.active=prod target/modulo39-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=prod target/modulo65-0.0.1-SNAPSHOT.jar
