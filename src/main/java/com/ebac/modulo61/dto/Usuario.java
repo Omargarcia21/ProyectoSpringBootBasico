@@ -1,4 +1,4 @@
-package com.ebac.modulo39.dto;
+package com.ebac.modulo61.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,6 +1,6 @@
-package com.ebac.modulo39.service;
+package com.ebac.modulo61.service;
 
-import com.ebac.modulo39.dto.Usuario;
+import com.ebac.modulo61.dto.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

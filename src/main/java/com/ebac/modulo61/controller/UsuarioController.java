@@ -1,7 +1,7 @@
-package com.ebac.modulo39.controller;
+package com.ebac.modulo61.controller;
 
-import com.ebac.modulo39.dto.Usuario;
-import com.ebac.modulo39.service.UsuarioService;
+import com.ebac.modulo61.dto.Usuario;
+import com.ebac.modulo61.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
